@@ -1,7 +1,7 @@
 {
   # Git Configuration ( For Pulling Software Repos )
-  gitUsername = "Tyler Kelley";
-  gitEmail = "tylerzanekelley@gmail.com";
+  gitUsername = "ndowens";
+  gitEmail = "ndowens@artixlinux.org";
 
   # Hyprland Settings
   extraMonitorSettings = "";
@@ -15,15 +15,11 @@
   keyboardLayout = "us";
   consoleKeyMap = "us";
 
-  # For Nvidia Prime support
-  intelID = "PCI:1:0:0";
-  nvidiaID = "PCI:0:2:0";
-
   # Enable NFS
-  enableNFS = true;
+  enableNFS = false;
 
   # Enable Printing Support
-  printEnable = false;
+  printEnable = true;
 
   # Set Stylix Image
   stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;

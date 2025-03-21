@@ -28,46 +28,6 @@
         };
         modules = [./profiles/amd];
       };
-      nvidia = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/nvidia];
-      };
-      nvidia-laptop = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/nvidia-laptop];
-      };
-      intel = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/intel];
-      };
-      vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [./profiles/vm];
-      };
     };
   };
 }

@@ -23,4 +23,5 @@
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
   ];
+  security.sudo.wheelNeedsPassword = false;
 }

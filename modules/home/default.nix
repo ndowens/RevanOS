@@ -8,6 +8,7 @@ in {
     ./bat.nix
     ./btop.nix
     ./cava.nix
+    ./dotfiles.nix
     ./emoji.nix
     ./fastfetch
     ./gh.nix

@@ -10,4 +10,7 @@
   drivers.nvidia-prime.enable = false;
   drivers.intel.enable = false;
   vm.guest-services.enable = false;
+
+  # Enable tailscale
+  services.tailscale.enable = true;
 }

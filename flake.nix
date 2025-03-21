@@ -1,5 +1,6 @@
 {
-  description = "ZaneyOS";
+  description = "RevanOS";
+  #ZaneyOS with my setup choice
 
   inputs = {
     home-manager = {
@@ -13,12 +14,12 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
-    host = "default";
-    profile = "amd";
+    host = "Revan";
+    profile = "Revan";
     username = "ndowens";
   in {
     nixosConfigurations = {
-      amd = nixpkgs.lib.nixosSystem {
+      Revan = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
           inherit inputs;
@@ -26,7 +27,7 @@
           inherit host;
           inherit profile;
         };
-        modules = [./profiles/amd];
+        modules = [./profiles/Revan];
       };
     };
   };

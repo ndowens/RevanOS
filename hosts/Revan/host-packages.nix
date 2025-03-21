@@ -4,6 +4,8 @@
     brave
     flatpak
     kdePackages.discover
-    home-manager
+    tailscale
+    mosh
+    distrobox
   ];
 }

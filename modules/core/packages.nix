@@ -22,8 +22,6 @@
     appimage-run # Needed For AppImage Support
     brave # Brave Browser
     brightnessctl # For Screen Brightness Control
-    cmatrix # Matrix Movie Effect In Terminal
-    cowsay # Great Fun Terminal Program
     distrobox
     docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal

@@ -7,5 +7,6 @@
     tailscale
     mosh
     distrobox
+    home-manager
   ];
 }

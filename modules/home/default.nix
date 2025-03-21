@@ -2,17 +2,13 @@
   inherit (import ../../hosts/${host}/variables.nix) waybarChoice;
 in {
   imports = [
-    ./amfora.nix
     ./bash.nix
-    ./bashrc-personal.nix
     ./bat.nix
     ./btop.nix
-    ./cava.nix
     ./dotfiles.nix
     ./emoji.nix
     ./fastfetch
     ./gh.nix
-    ./ghostty.nix
     ./git.nix
     ./gtk.nix
     ./htop.nix
@@ -32,7 +28,6 @@ in {
     ./wlogout
     ./xdg.nix
     ./yazi
-    ./zoxide.nix
     ./zsh
   ];
 }

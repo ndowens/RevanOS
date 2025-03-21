@@ -28,7 +28,9 @@
           inherit host;
           inherit profile;
         };
-        modules = [./profiles/Revan];
+        modules = [
+          ./profiles/Revan
+        ];
       };
     };
   };

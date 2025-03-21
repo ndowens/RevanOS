@@ -5,7 +5,7 @@
   ...
 }: {
   networking = {
-    hostName = "${host}";
+    hostName = "Revan";
     networkmanager.enable = true;
     timeServers = options.networking.timeServers.default ++ ["pool.ntp.org"];
     firewall = {

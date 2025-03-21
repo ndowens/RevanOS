@@ -1,8 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    audacity
-    discord
-    nodejs
-    obs-studio
+    vesktop
+    brave
+    flatpak
+    kdePackages.discover
+    home-manager
   ];
 }

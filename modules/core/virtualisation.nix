@@ -2,8 +2,8 @@
   # Only enable either docker or podman -- Not both
   virtualisation = {
     libvirtd.enable = false;
-    docker.enable = true;
-    podman.enable = false;
+    docker.enable = false;
+    podman.enable = true;
   };
   programs = {
     virt-manager.enable = false;

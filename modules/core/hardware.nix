@@ -1,10 +1,9 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   hardware = {
     sane = {
       enable = true;
-      extraBackends = [ pkgs.sane-airscan ];
-      disabledDefaultBackends = [ "escl" ];
+      extraBackends = [];
+      disabledDefaultBackends = ["escl"];
     };
     logitech.wireless.enable = false;
     logitech.wireless.enableGraphical = false;

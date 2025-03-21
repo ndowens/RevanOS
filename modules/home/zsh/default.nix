@@ -15,6 +15,7 @@
 
     oh-my-zsh = {
       enable = true;
+      plugins = ["git" "ssh-agent"];
     };
 
     plugins = [
@@ -38,8 +39,8 @@
       if [ -f $HOME/.zshrc-personal ]; then
         source $HOME/.zshrc-personal
       fi
+      export PATH="$HOME/.local/bin:$PATH"
     '';
-
     shellAliases = {
       sv = "sudo nvim";
       v = "nvim";

@@ -10,6 +10,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let

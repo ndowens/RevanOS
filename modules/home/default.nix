@@ -14,6 +14,7 @@ in {
     ./htop.nix
     ./hyprland
     ./kitty.nix
+    ./nixos-updatechecker.nix
     ./nvf.nix
     ./rofi
     ./qt.nix

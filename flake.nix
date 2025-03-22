@@ -11,6 +11,10 @@
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    nixos-updatechecker = {
+      url = "github:melianmiko/nixos-updatechecker";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -30,6 +34,7 @@
         };
         modules = [
           ./profiles/Revan
+          inputs.nixos-updatechecker.nixosModules.nixos-updatechecker
         ];
       };
     };

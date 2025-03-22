@@ -11,6 +11,7 @@
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    nix-software-center.url = "github:snowfallorg/nix-software-center";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let

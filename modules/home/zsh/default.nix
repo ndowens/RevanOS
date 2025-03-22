@@ -44,6 +44,7 @@
       sv = "sudo nvim";
       v = "nvim";
       c = "clear";
+      fc = "sudo nixos-rebuild dry-build --flake .#${profile}";
       fr = "sudo nixos-rebuild switch --flake .#${profile}";
       fu = "sudo sudo nixos-rebuild switch --flake .#${profile} --upgrade";
       zu = "sh <(curl -L https://gitlab.com/Zaney/zaneyos/-/raw/main/install-zaneyos.sh)";

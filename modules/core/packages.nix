@@ -9,7 +9,7 @@
     seahorse.enable = true;
     fuse.userAllowOther = true;
     mtr.enable = true;
-    adb.enable = true;
+    adb.enable = false;
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -20,10 +20,8 @@
 
   environment.systemPackages = with pkgs; [
     appimage-run # Needed For AppImage Support
-    brave # Brave Browser
     brightnessctl # For Screen Brightness Control
     distrobox
-    docker-compose # Allows Controlling Docker From A Single File
     duf # Utility For Viewing Disk Usage In Terminal
     eza # Beautiful ls Replacement
     ffmpeg # Terminal Video / Audio Editing
@@ -43,14 +41,11 @@
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nixfmt-rfc-style # Nix Formatter
     nwg-displays #configure monitor configs via GUI
-    onefetch #provides zsaneyos build info on current system
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
     pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
     playerctl # Allows Changing Media Volume Through Scripts
     socat # Needed For Screenshots
-    unrar # Tool For Handling .rar Files
-    unzip # Tool For Handling .zip Files
     usbutils # Good Tools For USB Devices
     wget # Tool For Fetching Files With Links
     yazi #TUI File Manager

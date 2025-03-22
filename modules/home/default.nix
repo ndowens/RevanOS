@@ -28,6 +28,7 @@ in {
     ./wlogout
     ./xdg.nix
     ./yazi
+    ./zen-browser.nix
     ./zsh
   ];
 }

@@ -10,6 +10,11 @@
     fuse.userAllowOther = true;
     mtr.enable = true;
     adb.enable = false;
+    nix-index.enable = true;
+    command-not-found.enable = false;
+    zsh.interactiveShellInit = ''
+      source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
+    '';
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;

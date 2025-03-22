@@ -14,7 +14,6 @@ in {
     ./htop.nix
     ./hyprland
     ./kitty.nix
-    #    ./nix-software-center.nix
     ./nvf.nix
     ./rofi
     ./qt.nix

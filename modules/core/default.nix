@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  home-manager,
+  ...
+}: {
   imports = [
     ./boot.nix
     ./flatpak.nix
@@ -9,6 +13,7 @@
     ./nfs.nix
     ./nh.nix
     ./packages.nix
+    ./power-profiles-daemon.nix
     ./printing.nix
     ./security.nix
     ./services.nix
@@ -24,4 +29,5 @@
     inputs.stylix.nixosModules.stylix
   ];
   security.sudo.wheelNeedsPassword = false;
+  home-manager.backupFileExtension = "backup";
 }

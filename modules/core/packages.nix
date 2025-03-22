@@ -50,6 +50,7 @@
     pciutils # Collection Of Tools For Inspecting PCI Devices
     pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
     playerctl # Allows Changing Media Volume Through Scripts
+    power-profiles-daemon
     socat # Needed For Screenshots
     usbutils # Good Tools For USB Devices
     wget # Tool For Fetching Files With Links

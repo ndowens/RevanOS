@@ -7,7 +7,6 @@
   imports = [
     ./zshrc-personal.nix
   ];
-
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;

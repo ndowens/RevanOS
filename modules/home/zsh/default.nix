@@ -45,7 +45,7 @@
       v = "nvim";
       c = "clear";
       fr = "sudo nixos-rebuild switch --flake .#${profile}";
-      fu = "sudo sudo nixos-rebuild switch --flake .#${profile} --update";
+      fu = "sudo sudo nixos-rebuild switch --flake .#${profile} --upgrade";
       zu = "sh <(curl -L https://gitlab.com/Zaney/zaneyos/-/raw/main/install-zaneyos.sh)";
       ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       cat = "bat";

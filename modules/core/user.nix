@@ -4,6 +4,7 @@
   username,
   host,
   profile,
+  system,
   ...
 }: let
   inherit (import ../../hosts/${host}/variables.nix) gitUsername;
@@ -13,7 +14,7 @@ in {
     useUserPackages = true;
     useGlobalPkgs = false;
     backupFileExtension = "backup";
-    extraSpecialArgs = {inherit inputs username host profile;};
+    extraSpecialArgs = {inherit inputs username system host profile;};
     users.${username} = {
       imports = [./../home];
       home = {
@@ -34,7 +35,6 @@ in {
       "libvirtd"
       "lp"
       "networkmanager"
-      "scanner"
       "wheel"
     ];
     shell = pkgs.zsh;

@@ -39,6 +39,7 @@
         source $HOME/.zshrc-personal
       fi
       export PATH="$HOME/.local/bin:$PATH"
+      export SKIPGPGPASSPROMPT=true
     '';
     shellAliases = {
       sv = "sudo nvim";

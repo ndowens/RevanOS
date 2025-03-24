@@ -29,5 +29,4 @@
     inputs.stylix.nixosModules.stylix
   ];
   security.sudo.wheelNeedsPassword = false;
-  home-manager.backupFileExtension = "backup";
 }

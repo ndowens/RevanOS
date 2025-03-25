@@ -40,6 +40,7 @@
       fi
       export PATH="$HOME/.local/bin:$PATH"
       export SKIPGPGPASSPROMPT=true
+      export SSHKEYSIGN="$HOME/.ssh/id_rsa"
     '';
     shellAliases = {
       sv = "sudo nvim";

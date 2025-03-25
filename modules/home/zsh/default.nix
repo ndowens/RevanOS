@@ -45,6 +45,7 @@
     shellAliases = {
       sv = "sudo nvim";
       v = "nvim";
+      am = "artix-metro";
       c = "clear";
       fc = "sudo nix-channel --update && sudo nixos-rebuild dry-build --flake ~/.config/nixos#${profile} --upgrade-all";
       fr = "sudo nixos-rebuild switch --flake ~/.config/nixos#${profile}";

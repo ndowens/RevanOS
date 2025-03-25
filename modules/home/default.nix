@@ -24,6 +24,7 @@ in {
     ./swappy.nix
     ./swaync.nix
     ./virtmanager.nix
+    ./vscodium.nix
     waybarChoice
     ./wezterm.nix
     ./wlogout

@@ -22,5 +22,6 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+    guix.enable = true;
   };
 }

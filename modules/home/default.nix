@@ -11,12 +11,14 @@ in {
     ./gh.nix
     ./git.nix
     ./gtk.nix
+    ./guix.nix
     ./htop.nix
     ./hyprland
     ./kitty.nix
     ./nixos-updatechecker.nix
     ./nvf.nix
     ./rofi
+    #    ./qemu.nix
     ./qt.nix
     ./scripts
     ./starship.nix

@@ -15,6 +15,7 @@
       url = "github:melianmiko/nixos-updatechecker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -35,6 +36,7 @@
         modules = [
           ./profiles/Revan
           inputs.nixos-updatechecker.nixosModules.nixos-updatechecker
+          #        inputs.chaotic.nixosModules.default
         ];
       };
     };

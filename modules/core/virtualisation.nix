@@ -6,10 +6,12 @@
     podman.enable = true;
   };
   programs = {
-    virt-manager.enable = true;
+    virt-manager.enable = false;
   };
   environment.systemPackages = with pkgs; [
     # virt-viewer # View Virtual Machines
-    qemu
+    virtualbox
   ];
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = ["ndowens"];
 }

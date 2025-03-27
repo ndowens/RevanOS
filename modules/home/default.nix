@@ -11,21 +11,18 @@ in {
     ./gh.nix
     ./git.nix
     ./gtk.nix
-    ./guix.nix
     ./htop.nix
     ./hyprland
     ./kitty.nix
     ./nixos-updatechecker.nix
     ./nvf.nix
     ./rofi
-    #    ./qemu.nix
     ./qt.nix
     ./scripts
     ./starship.nix
     ./stylix.nix
     ./swappy.nix
     ./swaync.nix
-    ./virtmanager.nix
     ./vscodium.nix
     waybarChoice
     ./wezterm.nix

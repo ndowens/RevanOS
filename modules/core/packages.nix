@@ -37,7 +37,6 @@
     htop # Simple Terminal Based System Monitor
     hyprpicker # Color Picker
     eog # For Image Viewing
-    guix
     inxi # CLI System Information Tool
     kdePackages.konversation
     killall # For Killing All Instances Of Programs

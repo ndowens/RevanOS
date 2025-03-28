@@ -16,13 +16,23 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
+  outputs = {
+    self,
+    nixpkgs,
+    hyprpanel,
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
     host = "Revan";
     profile = "Revan";
     username = "ndowens";
+    pkgs = import nixpkgs {
+      inherit system;
+      overlays = [inputs.hyprpanel.overlay];
+    };
   in {
     nixosConfigurations = {
       Revan = nixpkgs.lib.nixosSystem {
@@ -36,7 +46,6 @@
         modules = [
           ./profiles/Revan
           inputs.nixos-updatechecker.nixosModules.nixos-updatechecker
-          #        inputs.chaotic.nixosModules.default
         ];
       };
     };

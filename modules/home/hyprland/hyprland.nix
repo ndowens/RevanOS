@@ -182,6 +182,15 @@ in {
     overlay.enable = true;
     hyprland.enable = true;
     theme = "dracula_split";
+    layout = {
+      "bar.layouts" = {
+        "0" = {
+          left = ["dashboard" "workspaces" "windowtitle"];
+          middle = ["media"];
+          right = ["volume" "bluetooth" "systray" "clock" "notifications"];
+        };
+      };
+    };
     settings = {
       theme.font.size = "0.7rem";
       menus.clock.time.hideSeconds = true;

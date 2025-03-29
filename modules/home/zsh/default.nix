@@ -44,7 +44,6 @@
       export EDITOR="nvim"
     '';
     shellAliases = {
-      vim = "nvim";
       sv = "sudo nvim";
       am = "artix-metro";
       c = "clear";
@@ -59,5 +58,10 @@
       la = "eza --icons -lah --group-directories-first -1";
       tree = "eza --icons --tree --group-directories-first";
     };
+  };
+  programs.neovim = {
+    vimAlias = true;
+    viAlias = true;
+    defaultEditor = true;
   };
 }

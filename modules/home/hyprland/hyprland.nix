@@ -1,6 +1,7 @@
 {
   host,
   config,
+  inputs,
   pkgs,
   ...
 }: let
@@ -49,7 +50,7 @@ in {
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user start hyprpolkitagent"
         "killall -q swww;sleep .5 && swww init"
-        "killall -q waybar;sleep .5 && waybar"
+        "killall -q hyprpanel;sleep .5 && hyprpanel"
         "killall -q swaync;sleep .5 && swaync"
         "nm-applet --indicator"
         "pypr &"
@@ -104,8 +105,7 @@ in {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         enable_swallow = false;
-      };  
-
+      };
 
       dwindle = {
         pseudotile = true;
@@ -173,5 +173,32 @@ in {
       monitor=,preferred,auto,auto
       ${extraMonitorSettings}
     ";
+  };
+  imports = [inputs.hyprpanel.homeManagerModules.hyprpanel];
+  programs.hyprpanel = {
+    enable = true;
+    overwrite.enable = true;
+    overlay.enable = true;
+    hyprland.enable = true;
+    theme = "dracula_split";
+    layout = {
+      "bar.layouts" = {
+        "0" = {
+          left = ["dashboard" "workspaces" "windowtitle"];
+          middle = ["media"];
+          right = ["volume" "bluetooth" "systray" "clock" "notifications"];
+        };
+      };
+    };
+    settings = {
+      bar.launcher.autoDetectIcon = true;
+      bar.clock.format = "%a %b %d %I:%M %p";
+      menus.dashboard.shortcuts = {
+        enabled = true;
+        left.shortcut1.command = "zen";
+        left.shortcut1.tooltip = "Zen Browser";
+        left.shortcut3.command = "vesktop";
+      };
+    };
   };
 }

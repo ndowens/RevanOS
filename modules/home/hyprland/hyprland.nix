@@ -53,7 +53,6 @@ in {
         "killall -q swww;sleep .5 && swww init"
         "killall -q hyprpanel;sleep .5 && hyprpanel"
         "killall -q swaync;sleep .5 && swaync"
-        "nm-applet --indicator"
         "pypr &"
         "sleep 1.5 && swww img ${stylixImage}"
       ];

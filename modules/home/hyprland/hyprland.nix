@@ -183,14 +183,15 @@ in {
     hyprland.enable = true;
     theme = "dracula_split";
     settings = {
+      theme.font.size = "0.7rem";
+      menus.clock.time.hideSeconds = true;
+      bar.customModules.updates.updateCommand = "cd ~/.config/nixos && flake update && sudo nixos-rebuild switch --flake .#Revan --upgrade-all";
       bar.launcher.autoDetectIcon = true;
       menus.dashboard.shortcuts = {
         left.shortcut1.command = "zen";
         left.shortcut1.tooltip = "Zen Browser";
         left.shortcut3.command = "vesktop";
       };
-      theme.font.size = "0.7rem";
-      menus.clock.time.hideSeconds = true;
     };
   };
 }

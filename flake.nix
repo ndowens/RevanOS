@@ -20,7 +20,6 @@
       url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rebuild-wrapper.url = "github:aloshy-ai/nix-rebuild-wrapper";
   };
 
   outputs = {

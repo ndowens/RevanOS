@@ -185,6 +185,10 @@ in {
     settings = {
       theme.font.size = "0.7rem";
       menus.clock.time.hideSeconds = true;
+      bar.customModules.updates = {
+        label = false;
+        autoHide = true;
+      };
       bar.customModules.updates.updateCommand = "cd ~/.config/nixos && flake update && sudo nixos-rebuild switch --flake .#Revan --upgrade-all";
       bar.launcher.autoDetectIcon = true;
       menus.dashboard.shortcuts = {

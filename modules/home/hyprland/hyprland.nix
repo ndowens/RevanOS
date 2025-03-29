@@ -32,7 +32,7 @@ in {
     };
     ".face.icon".source = ./face.jpg;
     ".config/face.jpg".source = ./face.jpg;
-    ".config/hyprpanel/config.json".source = ./configs/config.json;
+    # ".config/hyprpanel/config.json".source = ./configs/config.json;
   };
   wayland.windowManager.hyprland = {
     enable = true;
@@ -181,8 +181,16 @@ in {
     overwrite.enable = false;
     overlay.enable = true;
     hyprland.enable = true;
-  };
-  home.file = {
-    #
+    theme = "dracula_split";
+    settings = {
+      bar.launcher.autoDetectIcon = true;
+      menus.dashboard.shortcuts = {
+        left.shortcut1.command = "zen";
+        left.shortcut1.tooltip = "Zen Browser";
+        left.shortcut3.command = "vesktop";
+      };
+      theme.font.size = "0.7rem";
+      menus.clock.time.hideSeconds = true;
+    };
   };
 }

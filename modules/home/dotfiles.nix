@@ -4,6 +4,5 @@
     ".config/pacman.d".source = ./configs/pacman.d;
     ".config/pacman.conf".source = ./configs/pacman.conf;
     ".config/makepkg.conf".source = ./configs/makepkg.conf;
-    ".config/hyprpanel/config.json".source = ./configs/config.json;
   };
 }

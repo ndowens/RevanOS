@@ -16,6 +16,7 @@ in {
     ./fastfetch
     ./gh.nix
     ./git.nix
+    ./grim.nix
     ./gtk.nix
     ./htop.nix
     ./hyprland

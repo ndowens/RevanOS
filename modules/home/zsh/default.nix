@@ -41,17 +41,16 @@
       export PATH="$HOME/.local/bin:$PATH"
       export SKIPGPGPASSPROMPT=true
       export SSHKEYSIGN="$HOME/.ssh/id_rsa"
-      export EDITOR="vim"
+      export EDITOR="nvim"
     '';
     shellAliases = {
+      vim = "nvim";
       sv = "sudo nvim";
-      v = "nvim";
       am = "artix-metro";
       c = "clear";
       fc = "cd ~/.config/ && flake update && sudo nixos-rebuild dry-build --flake ~/.config/nixos#${profile} --upgrade-all";
       fr = "sudo nixos-rebuild switch --flake ~/.config/nixos#${profile}";
       fu = "sudo nixos-rebuild switch --flake ~/.config/nixos#${profile} --upgrade-all";
-      zu = "sh <(curl -L https://gitlab.com/Zaney/zaneyos/-/raw/main/install-zaneyos.sh)";
       ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       cat = "bat";
       man = "batman";

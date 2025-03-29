@@ -130,7 +130,7 @@
       autopairs.nvim-autopairs.enable = true;
 
       autocomplete.nvim-cmp.enable = true;
-      snippets.luasnip.enable = true;
+      snippets.luasnip.enable = false;
 
       tabline = {
         nvimBufferline.enable = true;

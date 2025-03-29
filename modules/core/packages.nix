@@ -25,12 +25,11 @@
 
   environment.systemPackages = with pkgs; [
     alejandra
-    appimage-run # Needed For AppImage Support
     brightnessctl # For Screen Brightness Control
+    clang
     distrobox
     duf # Utility For Viewing Disk Usage In Terminal
     eza # Beautiful ls Replacement
-    ffmpeg # Terminal Video / Audio Editing
     file-roller # Archive Manager
     gamemode
     gedit # Simple Graphical Text Editor
@@ -53,9 +52,7 @@
     pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
     playerctl # Allows Changing Media Volume Through Scripts
     power-profiles-daemon
-    socat # Needed For Screenshots
     usbutils # Good Tools For USB Devices
     wget # Tool For Fetching Files With Links
-    yazi #TUI File Manager
   ];
 }

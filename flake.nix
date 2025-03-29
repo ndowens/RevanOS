@@ -17,7 +17,7 @@
     };
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     hyprpanel = {
-      url = "github:Jas-SinghFSU/HyprPanel";
+      url = "github:ndowens/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

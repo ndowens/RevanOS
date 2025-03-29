@@ -170,7 +170,7 @@ in {
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto,vrr,2
+      monitor=,1980x1080@180,auto,auto,vrr,2
       ${extraMonitorSettings}
     ";
   };
@@ -191,6 +191,7 @@ in {
       };
     };
     settings = {
+      bar.systray.ignore = ["nm-applet"];
       theme.font.size = "0.7rem";
       menus.clock.time.hideSeconds = true;
       bar.customModules.updates = {

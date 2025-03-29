@@ -5,6 +5,10 @@
 }: {
   programs = {
     firefox.enable = false; # Firefox is not installed by default
+    nm-applet = {
+      enable = false;
+      indicator = false;
+    };
     dconf.enable = true;
     seahorse.enable = true;
     fuse.userAllowOther = true;

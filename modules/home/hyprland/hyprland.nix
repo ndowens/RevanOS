@@ -171,7 +171,7 @@ in {
     };
 
     extraConfig = "
-      monitor=,preferred,auto,auto
+      monitor=,preferred,auto,auto,vrr,2
       ${extraMonitorSettings}
     ";
   };

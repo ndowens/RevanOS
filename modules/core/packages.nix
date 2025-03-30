@@ -44,6 +44,7 @@
     inxi # CLI System Information Tool
     kdePackages.konversation
     killall # For Killing All Instances Of Programs
+    latencyflex-vulkan
     libnotify # For Notifications
     lm_sensors # Used For Getting Hardware Temps
     lolcat # Add Colors To Your Terminal Command Output

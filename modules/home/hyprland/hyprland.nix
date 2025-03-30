@@ -51,7 +51,7 @@ in {
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user start hyprpolkitagent"
         "killall -q swww;sleep .5 && swww init"
-        "killall -q hyprpanel;sleep .5 && hyprpanel"
+        "hyprpanel"
         "killall -q swaync;sleep .5 && swaync"
         "pypr &"
         "sleep 1.5 && swww img ${stylixImage}"
@@ -170,7 +170,7 @@ in {
     };
 
     extraConfig = "
-      monitor=,1980x1080@180,auto,auto,vrr,2
+      monitor=,prefered,auto,auto,vrr,2
       ${extraMonitorSettings}
     ";
   };

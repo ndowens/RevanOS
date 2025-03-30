@@ -17,7 +17,7 @@
     };
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     hyprpanel = {
-      url = "github:ndowens/HyprPanel";
+      url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -26,6 +26,7 @@
     self,
     nixpkgs,
     hyprpanel,
+    chaotic,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -52,6 +53,7 @@
           ./profiles/Revan
           inputs.nixos-updatechecker.nixosModules.nixos-updatechecker
           inputs.home-manager.nixosModules.default
+          chaotic.nixosModules.default
           nixpkgsConfig
         ];
       };

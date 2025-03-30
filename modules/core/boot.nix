@@ -5,7 +5,7 @@
   ...
 }: {
   boot = {
-    kernelPackages = pkgs.linuxPackages_zen;
+    kernelPackages = pkgs.linuxPackages_latest;
     kernelModules = ["amdgpu"];
     kernel.sysctl = {"vm.max_map_count" = 2147483642;};
     loader.systemd-boot.enable = true;

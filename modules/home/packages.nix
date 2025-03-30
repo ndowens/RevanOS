@@ -1,7 +1,6 @@
-{pkgs, home-manager, ...}:
+{pkgs, inputs, ...}:
+{
 home.packages = with pkgs; [
-  inputs.zen-browser.packages."${system}".default;
-  inputs.nixos-updatechecker.nixosModules.nixos-updatechecker;
-  qemu
-  libvirt
-];
+    #  ghostty
+  ];
+}

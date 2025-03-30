@@ -23,6 +23,7 @@ in {
     ./kitty.nix
     #./nixos-updatechecker.nix
     #./nvf.nix
+    ./ghostty.nix
     ./rofi
     ./qt.nix
     ./scripts

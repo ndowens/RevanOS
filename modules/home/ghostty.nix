@@ -21,41 +21,41 @@
     mouse-hide-while-typing = true
 
     # keybindings
-    keybind = alt+s>r=reload_config
-    keybind = alt+s>x=close_surface
+    keybind = alt+shift+r=reload_config
+    keybind = alt+shift+c=close_surface
 
-    keybind = alt+s>n=new_window
+    keybind = alt+shift+n=new_window
 
     # tabs
-    keybind = alt+s>c=new_tab
-    keybind = alt+s>shift+l=next_tab
-    keybind = alt+s>shift+h=previous_tab
-    keybind = alt+s>comma=move_tab:-1
-    keybind = alt+s>period=move_tab:1
+    keybind = alt+shift+c=new_tab
+    keybind = alt+shift+l=next_tab
+    keybind = alt+shift+h=previous_tab
+    keybind = alt+shift+comma=move_tab:-1
+    keybind = alt+shift+period=move_tab:1
 
     # quick tab switch
-    keybind = alt+s>1=goto_tab:1
-    keybind = alt+s>2=goto_tab:2
-    keybind = alt+s>3=goto_tab:3
-    keybind = alt+s>4=goto_tab:4
-    keybind = alt+s>5=goto_tab:5
-    keybind = alt+s>6=goto_tab:6
-    keybind = alt+s>7=goto_tab:7
-    keybind = alt+s>8=goto_tab:8
-    keybind = alt+s>9=goto_tab:9
+    keybind = alt+shift+1=goto_tab:1
+    keybind = alt+shift+2=goto_tab:2
+    keybind = alt+shift+3=goto_tab:3
+    keybind = alt+shift+4=goto_tab:4
+    keybind = alt+shift+5=goto_tab:5
+    keybind = alt+shift+6=goto_tab:6
+    keybind = alt+shift+7=goto_tab:7
+    keybind = alt+shift+8=goto_tab:8
+    keybind = alt+shift+9=goto_tab:9
 
     # split
-    keybind = alt+s>\=new_split:right
-    keybind = alt+s>-=new_split:down
+    keybind = alt+shift+\=new_split:right
+    keybind = alt+shift+-=new_split:down
 
-    keybind = alt+s>j=goto_split:bottom
-    keybind = alt+s>k=goto_split:top
-    keybind = alt+s>h=goto_split:left
-    keybind = alt+s>l=goto_split:right
+    keybind = alt+shift+j=goto_split:bottom
+    keybind = alt+shift+k=goto_split:top
+    keybind = alt+shift+h=goto_split:left
+    keybind = alt+shift+l=goto_split:right
 
-    keybind = alt+s>z=toggle_split_zoom
+    keybind = alt+shift+z=toggle_split_zoom
 
-    keybind = alt+s>e=equalize_splits
+    keybind = alt+shift+e=equalize_splits
 
     # other
     #copy-on-select = clipboard

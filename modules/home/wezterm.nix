@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.wezterm = {
-    enable = false;
+    enable = true;
     package = pkgs.wezterm;
   };
   home.file."./.config/wezterm/wezterm.lua".text = ''

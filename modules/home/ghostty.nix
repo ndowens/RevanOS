@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.ghostty = {
     enable = true;
     package = pkgs.ghostty;
@@ -22,7 +23,7 @@
 
     # keybindings
     keybind = alt+shift+r=reload_config
-    keybind = alt+shift+c=close_surface
+    keybind = alt+shift+q=close_surface
 
     keybind = alt+shift+n=new_window
 

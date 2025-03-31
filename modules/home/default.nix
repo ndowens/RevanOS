@@ -4,9 +4,8 @@
   pkgs,
   config,
   ...
-}: let
-  inherit (import ../../hosts/${host}/variables.nix) waybarChoice;
-in {
+}:
+{
   imports = [
     ./bash.nix
     ./bat.nix
@@ -32,7 +31,6 @@ in {
     ./swappy.nix
     ./swaync.nix
     ./vscodium.nix
-    waybarChoice
     ./wezterm.nix
     ./wlogout
     ./xdg.nix

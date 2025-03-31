@@ -21,7 +21,7 @@ in {
     ./htop.nix
     ./hyprland
     ./kitty.nix
-    #./nixos-updatechecker.nix
+    ./nixvim.nix
     #./nvf.nix
     ./ghostty.nix
     ./rofi

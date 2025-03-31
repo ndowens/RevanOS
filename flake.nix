@@ -20,13 +20,18 @@
       url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+        url = "github:nix-community/nixvim";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+    khanelivim.url = "github:khaneliman/khanelivim";
   };
-
   outputs = {
     self,
     nixpkgs,
     hyprpanel,
     chaotic,
+    khanelivim,
     ...
   } @ inputs: let
     system = "x86_64-linux";

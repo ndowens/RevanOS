@@ -1,8 +1,8 @@
 {
   inputs,
-  home-manager,
   ...
-}: {
+}:
+{
   imports = [
     ./boot.nix
     ./flatpak.nix

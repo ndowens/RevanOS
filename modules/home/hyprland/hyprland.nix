@@ -214,7 +214,7 @@ in
       menus.dashboard.shortcuts = {
         left.shortcut1.command = "zen";
         left.shortcut1.tooltip = "Zen Browser";
-        left.shortcut3.command = "discord";
+        left.shortcut3.command = "vesktop";
       };
     };
   };

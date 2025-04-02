@@ -17,7 +17,7 @@ in
       "$modifier,Y,exec,kitty -e yazi"
       "$modifier,E,exec,emopicker9000"
       "$modifier,S,exec,screenshootin"
-      "$modifier,v,exec,discord"
+      "$modifier,v,exec,vesktop"
       "$modifier,O,exec,obs"
       "$modifier,C,exec,hyprpicker -a"
       "$modifier,G,exec,gimp"

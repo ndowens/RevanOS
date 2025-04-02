@@ -19,10 +19,10 @@
     ./gtk.nix
     ./htop.nix
     ./hyprland
+    ./ghostty.nix
     ./kitty.nix
     ./nixvim.nix
-    #./nvf.nix
-    ./ghostty.nix
+    ./packages.nix
     ./rofi
     ./qt.nix
     ./scripts

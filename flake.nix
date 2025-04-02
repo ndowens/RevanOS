@@ -3,12 +3,11 @@
   #ZaneyOS with my setup choice
 
   inputs = {
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
@@ -35,6 +34,7 @@
       khanelivim,
       determinate,
       fh,
+      home-manager,
       ...
     }@inputs:
     let
@@ -44,7 +44,7 @@
       username = "ndowens";
       nixpkgsConfig = {
         nixpkgs.overlays = [
-          inputs.hyprpanel.overlay
+          hyprpanel.overlay
         ];
         nixpkgs.config.allowUnfree = true;
       };
@@ -61,7 +61,7 @@
           };
           modules = [
             ./profiles/Revan
-            inputs.home-manager.nixosModules.default
+            home-manager.nixosModules.default
             chaotic.nixosModules.default
             nixpkgsConfig
             determinate.nixosModules.default

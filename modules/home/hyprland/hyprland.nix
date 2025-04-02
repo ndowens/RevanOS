@@ -178,32 +178,15 @@ in
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
   programs.hyprpanel = {
     enable = true;
-    overwrite.enable = false;
+    overwrite.enable = true;
     overlay.enable = true;
     hyprland.enable = true;
-    theme = "dracula_split";
-    layout = {
-      "bar.layouts" = {
-        "0" = {
-          left = [
-            "dashboard"
-            "workspaces"
-            "windowtitle"
-          ];
-          middle = [ "media" ];
-          right = [
-            "volume"
-            "bluetooth"
-            "systray"
-            "clock"
-            "notifications"
-          ];
-        };
-      };
-    };
     settings = {
+      theme = {
+        name = "dracula_split";
+        font.size = "0.7rem";
+      };
       bar.systray.ignore = [ "nm-applet" ];
-      theme.font.size = "0.7rem";
       menus.clock.time.hideSeconds = true;
       bar.customModules.updates = {
         label = false;
@@ -215,6 +198,25 @@ in
         left.shortcut1.command = "zen";
         left.shortcut1.tooltip = "Zen Browser";
         left.shortcut3.command = "vesktop";
+      };
+      layout = {
+        "bar.layouts" = {
+          "0" = {
+            left = [
+              "dashboard"
+              "workspaces"
+              "windowtitle"
+            ];
+            middle = [ "media" ];
+            right = [
+              "volume"
+              "bluetooth"
+              "systray"
+              "clock"
+              "notifications"
+            ];
+          };
+        };
       };
     };
   };

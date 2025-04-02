@@ -1,6 +1,6 @@
-{pkgs, inputs, ...}:
+{ pkgs, inputs, ... }:
 {
-home.packages = with pkgs; [
-    #  ghostty
+  home.packages = with pkgs; [
+    easyrpg-player
   ];
 }

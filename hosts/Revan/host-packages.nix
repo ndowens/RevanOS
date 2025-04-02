@@ -1,6 +1,7 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
-    vesktop
+    discord
     brave
     flatpak
     kdePackages.discover

@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    #    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nvf.url = "github:notashelf/nvf";
     stylix.url = "github:danth/stylix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
@@ -22,6 +22,8 @@
     };
     khanelivim.url = "github:khaneliman/khanelivim";
     rebuild-wrapper.url = "github:aloshy-ai/nix-rebuild-wrapper";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3.2.0";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
   };
   outputs =
     {
@@ -30,6 +32,7 @@
       hyprpanel,
       chaotic,
       khanelivim,
+      determinate,
       ...
     }@inputs:
     let
@@ -59,6 +62,7 @@
             inputs.home-manager.nixosModules.default
             chaotic.nixosModules.default
             nixpkgsConfig
+            determinate.nixosModules.default
           ];
         };
       };

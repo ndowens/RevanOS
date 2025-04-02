@@ -4,14 +4,15 @@
   inputs,
   pkgs,
   ...
-}: let
-  inherit
-    (import ../../../hosts/${host}/variables.nix)
+}:
+let
+  inherit (import ../../../hosts/${host}/variables.nix)
     extraMonitorSettings
     keyboardLayout
     stylixImage
     ;
-in {
+in
+{
   home.packages = with pkgs; [
     swww
     grim
@@ -40,7 +41,7 @@ in {
     systemd = {
       enable = true;
       enableXdgAutostart = true;
-      variables = ["--all"];
+      variables = [ "--all" ];
     };
     xwayland = {
       enable = true;
@@ -92,7 +93,8 @@ in {
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base0C}) 45deg";
+        "col.active_border" =
+          "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base0C}) 45deg";
         "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
@@ -173,7 +175,7 @@ in {
       ${extraMonitorSettings}
     ";
   };
-  imports = [inputs.hyprpanel.homeManagerModules.hyprpanel];
+  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
   programs.hyprpanel = {
     enable = true;
     overwrite.enable = false;
@@ -183,14 +185,24 @@ in {
     layout = {
       "bar.layouts" = {
         "0" = {
-          left = ["dashboard" "workspaces" "windowtitle"];
-          middle = ["media"];
-          right = ["volume" "bluetooth" "systray" "clock" "notifications"];
+          left = [
+            "dashboard"
+            "workspaces"
+            "windowtitle"
+          ];
+          middle = [ "media" ];
+          right = [
+            "volume"
+            "bluetooth"
+            "systray"
+            "clock"
+            "notifications"
+          ];
         };
       };
     };
     settings = {
-      bar.systray.ignore = ["nm-applet"];
+      bar.systray.ignore = [ "nm-applet" ];
       theme.font.size = "0.7rem";
       menus.clock.time.hideSeconds = true;
       bar.customModules.updates = {
@@ -202,7 +214,7 @@ in {
       menus.dashboard.shortcuts = {
         left.shortcut1.command = "zen";
         left.shortcut1.tooltip = "Zen Browser";
-        left.shortcut3.command = "vesktop";
+        left.shortcut3.command = "discord";
       };
     };
   };

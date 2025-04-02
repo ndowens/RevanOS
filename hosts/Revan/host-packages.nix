@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
     vesktop
@@ -9,5 +9,6 @@
     mosh
     distrobox
     home-manager
+    inputs.fh.packages.x86_64-linux.default
   ];
 }

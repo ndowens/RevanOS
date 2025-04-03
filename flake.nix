@@ -3,7 +3,7 @@
   #ZaneyOS with my setup choice
 
   inputs = {
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,8 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     khanelivim.url = "github:khaneliman/khanelivim";
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3.2.0";
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
   };
   outputs =
@@ -31,10 +29,8 @@
       hyprpanel,
       chaotic,
       khanelivim,
-      determinate,
       fh,
       home-manager,
-      nixpkgs-unstable,
       ...
     }@inputs:
     let
@@ -64,7 +60,6 @@
             home-manager.nixosModules.default
             chaotic.nixosModules.default
             nixpkgsConfig
-            determinate.nixosModules.default
           ];
         };
       };

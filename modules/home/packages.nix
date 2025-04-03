@@ -4,5 +4,6 @@
     easyrpg-player
     heroic
     xfce.thunar
+    lutris
   ];
 }

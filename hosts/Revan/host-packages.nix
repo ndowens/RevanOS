@@ -1,8 +1,6 @@
 { pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    vesktop
-    brave
     flatpak
     kdePackages.discover
     tailscale

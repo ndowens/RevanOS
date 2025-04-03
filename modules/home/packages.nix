@@ -5,5 +5,6 @@
     heroic
     xfce.thunar
     lutris
+    vesktop
   ];
 }

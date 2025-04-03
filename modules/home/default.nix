@@ -3,9 +3,11 @@
   inputs,
   pkgs,
   config,
+  nixpkgs,
   ...
 }:
 {
+  nixpkgs.config.allowUnfree = true;
   imports = [
     ./bash.nix
     ./bat.nix

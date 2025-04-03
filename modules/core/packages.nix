@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   programs = {
     firefox.enable = false; # Firefox is not installed by default
     nm-applet = {
@@ -51,7 +52,7 @@
     lshw # Detailed Hardware Information
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nixfmt-rfc-style # Nix Formatter
-    nwg-displays #configure monitor configs via GUI
+    nwg-displays # configure monitor configs via GUI
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
     pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
@@ -59,5 +60,7 @@
     power-profiles-daemon
     usbutils # Good Tools For USB Devices
     wget # Tool For Fetching Files With Links
+    wineWowPackages.staging
+    wineWowPackages.waylandFull
   ];
 }

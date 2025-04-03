@@ -20,7 +20,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     khanelivim.url = "github:khaneliman/khanelivim";
-    rebuild-wrapper.url = "github:aloshy-ai/nix-rebuild-wrapper";
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3.2.0";
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
@@ -35,6 +34,7 @@
       determinate,
       fh,
       home-manager,
+      nixpkgs-unstable,
       ...
     }@inputs:
     let

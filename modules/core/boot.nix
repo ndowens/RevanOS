@@ -1,24 +1,21 @@
 {
   pkgs,
   config,
-  nixpkgs,
+  inputs,
   ...
-}: {
+}:
+let
+  pkgs = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux;
+in
+{
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-    kernelModules = ["amdgpu"];
-    kernel.sysctl = {"vm.max_map_count" = 2147483642;};
+    kernelPackages = pkgs.linuxPackages_zen;
+    kernelModules = [ "amdgpu" ];
+    kernel.sysctl = {
+      "vm.max_map_count" = 2147483642;
+    };
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
-    # Appimage Support
-    binfmt.registrations.appimage = {
-      wrapInterpreterInShell = false;
-      interpreter = "${pkgs.appimage-run}/bin/appimage-run";
-      recognitionType = "magic";
-      offset = 0;
-      mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
-      magicOrExtension = ''\x7fELF....AI\x02'';
-    };
     plymouth.enable = true;
   };
 }

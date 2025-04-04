@@ -455,11 +455,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743579526,
-        "narHash": "sha256-O2t5aCIr7uFAT9nSMGO56xFTEYEWRudffA0Yc7S/zMQ=",
+        "lastModified": 1743751383,
+        "narHash": "sha256-f0vNdXV5zj78v6wSmnP5/aZozYAVOpQ92kXWH+RGmF4=",
         "owner": "Jas-SinghFSU",
         "repo": "HyprPanel",
-        "rev": "3332d309e4bdac156d383f26a5e2320dbcf8a7d3",
+        "rev": "9a40475f4a65e265cc3d506c4058f454047a8520",
         "type": "github"
       },
       "original": {
@@ -559,11 +559,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1743742311,
-        "narHash": "sha256-H9NP4yeL35yhtUsYHeL0TRu2k2qX53UZIQ8HWbRvDdY=",
+        "lastModified": 1743751078,
+        "narHash": "sha256-Tux2QtJNy8IbF0ErWSaLg+lJcljo0/AyyEgvlS312ak=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "6527f230b4ac4cd7c39a4ab570500d8e2564e5ff",
+        "rev": "230479874c95697578c56179905e4acf97d23e4d",
         "type": "github"
       },
       "original": {

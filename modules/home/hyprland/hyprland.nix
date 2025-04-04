@@ -139,8 +139,8 @@ in
       };
 
       render = {
-        explicit_sync = 1; # Change to 1 to disable
-        explicit_sync_kms = 1;
+        explicit_sync = 2; # Change to 1 to disable
+        explicit_sync_kms = 2;
         direct_scanout = 0;
       };
 
@@ -195,7 +195,7 @@ in
       bar.customModules.updates.updateCommand = "cd ~/.config/nixos && flake update && sudo nixos-rebuild switch --flake .#Revan --upgrade-all";
       bar.launcher.autoDetectIcon = true;
       menus.dashboard.shortcuts = {
-        left.shortcut1.command = "zen";
+        left.shortcut1.command = "$(which zen)";
         left.shortcut1.tooltip = "Zen Browser";
         left.shortcut3.command = "vesktop";
       };

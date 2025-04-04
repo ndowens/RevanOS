@@ -9,7 +9,7 @@
     inputs.nixvim.homeManagerModules.nixvim
   ];
   programs.nixvim = {
-    enable = true;
+    enable = false;
     extraPlugins = [ pkgs.vimPlugins.catppuccin-nvim ];
     colorscheme = "catppuccin";
     plugins.nix.enable = true;

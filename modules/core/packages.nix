@@ -52,6 +52,7 @@
     lshw # Detailed Hardware Information
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nixfmt-rfc-style # Nix Formatter
+    inputs.nixvim.packages.x86_64-linux.default
     nwg-displays # configure monitor configs via GUI
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices

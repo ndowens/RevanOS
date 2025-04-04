@@ -4,9 +4,6 @@
   inputs,
   ...
 }:
-let
-  #  pkgs = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux;
-in
 {
   boot = {
     kernelPackages = pkgs.linuxPackages_zen;

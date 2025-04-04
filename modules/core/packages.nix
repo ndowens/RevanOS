@@ -11,7 +11,7 @@
       indicator = false;
     };
     dconf.enable = true;
-    seahorse.enable = true;
+    seahorse.enable = false;
     fuse.userAllowOther = true;
     mtr.enable = true;
     adb.enable = false;
@@ -21,8 +21,8 @@
       source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
     '';
     gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
+      enable = false;
+      enableSSHSupport = false;
     };
   };
 
@@ -31,7 +31,7 @@
   environment.systemPackages = with pkgs; [
     alejandra
     brightnessctl # For Screen Brightness Control
-    clang
+#   clang
     distrobox
     duf # Utility For Viewing Disk Usage In Terminal
     eza # Beautiful ls Replacement
@@ -56,7 +56,7 @@
     nwg-displays # configure monitor configs via GUI
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
-    pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
+#   pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
     playerctl # Allows Changing Media Volume Through Scripts
     power-profiles-daemon
     usbutils # Good Tools For USB Devices

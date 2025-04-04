@@ -10,7 +10,14 @@
   ];
   programs.nixvim = {
     enable = true;
-    #extraPlugins = [ pkgs.vimPlugins.catppuccin ];
-    #colorscheme = "catppuccin";
-  };
+    extraPlugins = [ pkgs.vimPlugins.catppuccin-nvim ];
+    colorscheme = "catppuccin";
+    plugins.nix.enable = true;
+    plugins.treesitter = {
+    	enable = true;
+	grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+		nix
+		vim ];
+	};
+     };
 }

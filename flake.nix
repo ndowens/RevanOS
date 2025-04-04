@@ -19,49 +19,42 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    khanelivim.url = "github:khaneliman/khanelivim";
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
   };
-  outputs =
-    {
-      self,
-      nixpkgs,
-      hyprpanel,
-      chaotic,
-      khanelivim,
-      fh,
-      home-manager,
-      ...
-    }@inputs:
-    let
-      system = "x86_64-linux";
-      host = "Revan";
-      profile = "Revan";
-      username = "ndowens";
-      nixpkgsConfig = {
-        nixpkgs.overlays = [
-          hyprpanel.overlay
-        ];
-        nixpkgs.config.allowUnfree = true;
-      };
-    in
-    {
-      nixosConfigurations = {
-        Revan = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit inputs;
-            inherit username;
-            inherit host;
-            inherit profile;
-          };
-          modules = [
-            ./profiles/Revan
-            home-manager.nixosModules.default
-            chaotic.nixosModules.default
-            nixpkgsConfig
-          ];
+  outputs = {
+    self,
+    nixpkgs,
+    hyprpanel,
+    chaotic,
+    home-manager,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    host = "Revan";
+    profile = "Revan";
+    username = "ndowens";
+    nixpkgsConfig = {
+      nixpkgs.config.allowUnfree = true;
+      nixpkgs.overlays = [
+        hyprpanel.overlay
+      ];
+    };
+  in {
+    nixosConfigurations = {
+      Revan = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
         };
+        modules = [
+          ./profiles/Revan
+          home-manager.nixosModules.default
+          chaotic.nixosModules.default
+          nixpkgsConfig
+        ];
       };
     };
+  };
 }

@@ -7,6 +7,5 @@
     mosh
     distrobox
     home-manager
-    inputs.fh.packages.x86_64-linux.default
   ];
 }

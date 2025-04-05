@@ -26,10 +26,16 @@ in {
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  environment.variables = {
-    ZANEYOS_VERSION = "2.3";
-    ZANEYOS = "true";
-  };
+  environment = { 
+  	variables = {
+    		ZANEYOS_VERSION = "2.3";
+    		ZANEYOS = "true";
+  	};
+        shellAliases = {
+		nix-build = "nom-build";
+		"nix build" = "nom build";
+		};
+	};
   console.keyMap = "${consoleKeyMap}";
   system.stateVersion = "25.05"; # Do not change!
 }

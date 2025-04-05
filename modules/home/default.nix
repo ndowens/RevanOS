@@ -23,7 +23,7 @@
     ./hyprland
     ./ghostty.nix
     ./kitty.nix
-#    ./nixvim.nix
+    ./nixvim.nix
     ./packages.nix
     ./rofi
     ./qt.nix

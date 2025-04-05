@@ -2,8 +2,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   programs = {
     firefox.enable = false; # Firefox is not installed by default
     nm-applet = {
@@ -20,6 +19,7 @@
     zsh.interactiveShellInit = ''
       source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
     '';
+    nix-ld.enable = true;
     gnupg.agent = {
       enable = false;
       enableSSHSupport = false;
@@ -31,7 +31,6 @@
   environment.systemPackages = with pkgs; [
     alejandra
     brightnessctl # For Screen Brightness Control
-#   clang
     distrobox
     duf # Utility For Viewing Disk Usage In Terminal
     eza # Beautiful ls Replacement
@@ -52,11 +51,10 @@
     lshw # Detailed Hardware Information
     ncdu # Disk Usage Analyzer With Ncurses Interface
     nixfmt-rfc-style # Nix Formatter
-    inputs.nixvim.packages.x86_64-linux.default
+    nix-output-monitor
     nwg-displays # configure monitor configs via GUI
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
-#   pkg-config # Wrapper Script For Allowing Packages To Get Info On Others
     playerctl # Allows Changing Media Volume Through Scripts
     power-profiles-daemon
     usbutils # Good Tools For USB Devices

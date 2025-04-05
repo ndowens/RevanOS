@@ -19,6 +19,10 @@
       url = "github:dc-tec/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lix-module = {
+    url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
+    inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = {
     self,
@@ -26,9 +30,10 @@
     hyprpanel,
     chaotic,
     home-manager,
+    lix-module,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
+    system = "x86_64-v3-linux";
     host = "Revan";
     profile = "Revan";
     username = "ndowens";
@@ -53,6 +58,7 @@
           home-manager.nixosModules.default
           chaotic.nixosModules.default
           nixpkgsConfig
+	  lix-module.nixosModules.default
         ];
       };
     };

@@ -52,7 +52,7 @@
 
         # This is optional - it will default to your enabled colorscheme
         settings = {
-		  colorscheme = "catppuccin";
+#		  colorscheme = "catppuccin";
 
           # This is one of lightline's example configurations
           active = {
@@ -78,7 +78,7 @@
     };
 
     # There is a separate namespace for colorschemes:
-    colorschemes.catppuccin.enable = true;
+#    colorschemes.catppuccin.enable = true;
 
     # What about plugins not available as a module?
     # Use extraPlugins:

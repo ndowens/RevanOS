@@ -12,5 +12,6 @@
     vesktop
     gst_all_1.gst-libav
     thunderbird
+    inputs.khanelivim.packages.x86_64-linux.default
   ];
 }

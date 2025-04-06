@@ -1,8 +1,8 @@
 {
   inputs,
+  pkgs,
   ...
-}:
-{
+}: {
   imports = [
     ./boot.nix
     ./flatpak.nix
@@ -28,4 +28,5 @@
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
   ];
+  nix.package = pkgs.nixVersions.latest;
 }

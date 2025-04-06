@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.ghostty = {
     enable = true;
     package = pkgs.ghostty;
@@ -46,8 +45,8 @@
     keybind = alt+shift+9=goto_tab:9
 
     # split
-    keybind = alt+shift+-=new_split:right
-    keybind = alt+shift+\=new_split:down
+    keybind = alt+shift+\=new_split:right
+    keybind = alt+shift+-=new_split:down
 
     keybind = alt+shift+j=goto_split:bottom
     keybind = alt+shift+k=goto_split:top

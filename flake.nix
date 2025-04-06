@@ -29,47 +29,44 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs =
-    {
-      self,
-      nixpkgs,
-      hyprpanel,
-      chaotic,
-      home-manager,
-      lix-module,
-      nvf,
-      ...
-    }@inputs:
-    let
-      system = "x86_64-v3-linux";
-      host = "Revan";
-      profile = "Revan";
-      username = "ndowens";
-      nixpkgsConfig = {
-        nixpkgs.config.allowUnfree = true;
-        nixpkgs.overlays = [
-          hyprpanel.overlay
+  outputs = {
+    self,
+    nixpkgs,
+    hyprpanel,
+    chaotic,
+    home-manager,
+    lix-module,
+    nvf,
+    ...
+  } @ inputs: let
+    system = "x86_64-v3-linux";
+    host = "Revan";
+    profile = "Revan";
+    username = "ndowens";
+    nixpkgsConfig = {
+      nixpkgs.config.allowUnfree = true;
+      nixpkgs.overlays = [
+        hyprpanel.overlay
+      ];
+    };
+  in {
+    nixosConfigurations = {
+      Revan = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
+        };
+        modules = [
+          ./profiles/Revan
+          home-manager.nixosModules.default
+          chaotic.nixosModules.default
+          nixpkgsConfig
+          #            lix-module.nixosModules.default
         ];
       };
-    in
-    {
-      nixosConfigurations = {
-        Revan = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit inputs;
-            inherit username;
-            inherit host;
-            inherit profile;
-          };
-          modules = [
-            ./profiles/Revan
-            home-manager.nixosModules.default
-            chaotic.nixosModules.default
-            nixpkgsConfig
-            lix-module.nixosModules.default
-          ];
-        };
-      };
     };
+  };
 }

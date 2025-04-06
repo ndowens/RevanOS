@@ -19,50 +19,57 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     khanelivim.url = "github:khaneliman/khanelivim";
     lix-module = {
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {
-    self,
-    nixpkgs,
-    hyprpanel,
-    chaotic,
-    home-manager,
-    lix-module,
-    nixvim,
-    ...
-  } @ inputs: let
-    system = "x86_64-v3-linux";
-    host = "Revan";
-    profile = "Revan";
-    username = "ndowens";
-    nixpkgsConfig = {
-      nixpkgs.config.allowUnfree = true;
-      nixpkgs.overlays = [
-        hyprpanel.overlay
-      ];
-    };
-  in {
-    nixosConfigurations = {
-      Revan = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {
-          inherit inputs;
-          inherit username;
-          inherit host;
-          inherit profile;
-        };
-        modules = [
-          ./profiles/Revan
-          home-manager.nixosModules.default
-          chaotic.nixosModules.default
-          nixpkgsConfig
-          lix-module.nixosModules.default
+  outputs =
+    {
+      self,
+      nixpkgs,
+      hyprpanel,
+      chaotic,
+      home-manager,
+      lix-module,
+      nvf,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-v3-linux";
+      host = "Revan";
+      profile = "Revan";
+      username = "ndowens";
+      nixpkgsConfig = {
+        nixpkgs.config.allowUnfree = true;
+        nixpkgs.overlays = [
+          hyprpanel.overlay
         ];
       };
+    in
+    {
+      nixosConfigurations = {
+        Revan = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            inherit inputs;
+            inherit username;
+            inherit host;
+            inherit profile;
+          };
+          modules = [
+            ./profiles/Revan
+            home-manager.nixosModules.default
+            chaotic.nixosModules.default
+            nixpkgsConfig
+            lix-module.nixosModules.default
+          ];
+        };
+      };
     };
-  };
 }

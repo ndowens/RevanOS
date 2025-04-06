@@ -4,15 +4,14 @@
   inputs,
   pkgs,
   ...
-}:
-let
-  inherit (import ../../../hosts/${host}/variables.nix)
+}: let
+  inherit
+    (import ../../../hosts/${host}/variables.nix)
     extraMonitorSettings
     keyboardLayout
     stylixImage
     ;
-in
-{
+in {
   home.packages = with pkgs; [
     swww
     grim
@@ -41,7 +40,7 @@ in
     systemd = {
       enable = true;
       enableXdgAutostart = true;
-      variables = [ "--all" ];
+      variables = ["--all"];
     };
     xwayland = {
       enable = true;
@@ -93,8 +92,7 @@ in
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" =
-          "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base0C}) 45deg";
+        "col.active_border" = "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base0C}) 45deg";
         "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
@@ -106,6 +104,8 @@ in
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         enable_swallow = false;
+        vfr = true;
+        vrr = 2;
       };
 
       dwindle = {
@@ -175,7 +175,7 @@ in
       ${extraMonitorSettings}
     ";
   };
-  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
+  imports = [inputs.hyprpanel.homeManagerModules.hyprpanel];
   programs.hyprpanel = {
     enable = true;
     overwrite.enable = true;
@@ -186,7 +186,7 @@ in
         name = "dracula_split";
         font.size = "0.7rem";
       };
-      bar.systray.ignore = [ "nm-applet" ];
+      bar.systray.ignore = ["nm-applet"];
       menus.clock.time.hideSeconds = true;
       bar.customModules.updates = {
         label = false;
@@ -207,7 +207,7 @@ in
               "workspaces"
               "windowtitle"
             ];
-            middle = [ "media" ];
+            middle = ["media"];
             right = [
               "volume"
               "bluetooth"

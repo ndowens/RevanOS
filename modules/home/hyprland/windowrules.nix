@@ -91,7 +91,7 @@ in {
     };
 
     extraConfig = "
-      monitor=,1980x1080@180,auto,auto,vrr,2
+      monitor=,1980x1080@180,auto,auto
     ";
   };
 }

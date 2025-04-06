@@ -10,6 +10,7 @@
       indicator = false;
     };
     dconf.enable = true;
+    hyprland.enable = true;
     seahorse.enable = false;
     fuse.userAllowOther = true;
     mtr.enable = true;

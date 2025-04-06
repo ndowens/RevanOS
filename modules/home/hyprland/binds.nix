@@ -1,14 +1,13 @@
-{ host, ... }:
-let
-  inherit (import ../../../hosts/${host}/variables.nix)
+{host, ...}: let
+  inherit
+    (import ../../../hosts/${host}/variables.nix)
     browser
     terminal
     ;
-in
-{
+in {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$modifier,Return,exec,ghostty"
+      "$modifier,Return,exec,${terminal}"
       "$modifier,d,exec,rofi-launcher"
       "$modifier SHIFT,W,exec,web-search"
       "$modifier ALT,W,exec,wallsetter"

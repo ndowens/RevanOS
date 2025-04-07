@@ -1,3 +1,0 @@
-#Version 101045
-#AcknowledgedOutOfDateAddonsVersion 101045
-#AddOnsEnabled 1

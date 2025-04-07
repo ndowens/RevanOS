@@ -28,5 +28,5 @@
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
   ];
-  #  nix.package = pkgs.nixVersions.latest;
+  nix.package = pkgs.nixVersions.latest;
 }

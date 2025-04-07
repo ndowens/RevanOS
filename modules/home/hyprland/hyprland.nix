@@ -187,7 +187,7 @@ in {
         font.size = "0.7rem";
       };
       bar.systray.ignore = ["nm-applet"];
-      menus.clock.time.hideSeconds = true;
+      bar.clock.format = "%a %b %d  %I:%M %p";
       bar.customModules.updates = {
         label = false;
         autoHide = true;

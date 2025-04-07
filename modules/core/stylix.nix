@@ -35,10 +35,10 @@ in {
       size = 24;
     };
     fonts = {
-      monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrains Mono";
-      };
+      #  monospace = {
+      #  package = pkgs.nerd-fonts.jetbrains-mono;
+      #  name = "JetBrains Mono";
+      # };
       sansSerif = {
         package = pkgs.montserrat;
         name = "Montserrat";

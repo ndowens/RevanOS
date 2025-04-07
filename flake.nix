@@ -3,6 +3,8 @@
   #ZaneyOS with my setup choice
 
   inputs = {
+    #    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+    #nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -64,6 +66,7 @@
           chaotic.nixosModules.default
           nixpkgsConfig
           #            lix-module.nixosModules.default
+          #      inputs.determinate.nixosModules.default
         ];
       };
     };

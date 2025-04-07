@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 echo -en "\033]0;APH-TECH TERMINAL\a" 
 
 # ==============================================

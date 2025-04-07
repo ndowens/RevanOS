@@ -9,5 +9,6 @@
     xfce.thunar
     vesktop
     gst_all_1.gst-libav
+    unzip # Needed for ESO price updater
   ];
 }

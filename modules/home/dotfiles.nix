@@ -5,6 +5,6 @@
     ".config/pacman.conf".source = ./configs/pacman.conf;
     ".config/makepkg.conf".source = ./configs/makepkg.conf;
     ".config/artix-checkupdates/config".source = ./configs/artix-checkupdates/config;
-    "/home/${username}/Documents/'Elder Scrolls Online'".source = ./configs/Elder;
+    "/home/${username}/Documents/Elder Scrolls Online".source = ./configs/Elder;
   };
 }

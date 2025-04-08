@@ -3,9 +3,7 @@
   #ZaneyOS with my setup choice
 
   inputs = {
-    #    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
-    #nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,10 +23,8 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
   };
   outputs = {
     self,
@@ -36,8 +32,8 @@
     hyprpanel,
     chaotic,
     home-manager,
-    lix-module,
     nvf,
+    determinate,
     ...
   } @ inputs: let
     system = "x86_64-v3-linux";
@@ -65,8 +61,7 @@
           home-manager.nixosModules.default
           chaotic.nixosModules.default
           nixpkgsConfig
-          #            lix-module.nixosModules.default
-          #      inputs.determinate.nixosModules.default
+          determinate.nixosModules.default
         ];
       };
     };

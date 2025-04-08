@@ -58,9 +58,9 @@
       vim = "nvim";
       am = "artix-metro";
       c = "clear";
-      fc = "cd ~/.config/nixos && flake update && sudo nixos-rebuild dry-build --flake ~/.config/nixos#${profile} --upgrade-all";
-      fr = "sudo nixos-rebuild switch --flake ~/.config/nixos#${profile}";
-      fu = "sudo nixos-rebuild switch --flake ~/.config/nixos#${profile} --upgrade-all";
+      fc = "cd ~/.config/nixos && flake update && sudo nixos-rebuild dry-build --flake ~/.config/nixos#${profile} --upgrade-all -L";
+      fr = "sudo nixos-rebuild switch --flake ~/.config/nixos#${profile} -L";
+      fu = "sudo nixos-rebuild switch --flake ~/.config/nixos#${profile} --upgrade-all -L";
       ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       cat = "bat";
       man = "batman";

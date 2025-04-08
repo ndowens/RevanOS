@@ -43,6 +43,7 @@
     host = "Revan";
     profile = "Revan";
     username = "ndowens";
+    pkgs = "import <nixpkgs> {}";
     nixpkgsConfig = {
       nixpkgs.config.allowUnfree = true;
       nixpkgs.overlays = [

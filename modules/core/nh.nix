@@ -1,17 +1,13 @@
-{
-  pkgs,
-  username,
-  ...
-}: let
+{pkgs, ...}: let
   username = "ndowens";
 in {
   programs.nh = {
     enable = true;
     clean = {
       enable = true;
-      extraArgs = "--keep-since 7d --keep 5";
+      extraArgs = "--keep-since 4d --keep 3";
     };
-    flake = "/home/${username}/.config/home-manager";
+    flake = "/home/${username}/.config/nixos";
   };
 
   environment.systemPackages = with pkgs; [

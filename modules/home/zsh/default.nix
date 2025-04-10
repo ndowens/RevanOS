@@ -68,6 +68,7 @@
       ll = "eza --icons -lh --group-directories-first -1 --no-user --long";
       la = "eza --icons -lah --group-directories-first -1";
       tree = "eza --icons --tree --group-directories-first";
+      ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
     };
   };
   programs.neovim = {

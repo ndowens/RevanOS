@@ -28,6 +28,7 @@
       url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
       inputs.nixpkgs.follows = "det-nixpkgs";
     };
+    nix-search-tv.url = "github:3timeslazy/nix-search-tv";
   };
   outputs = {
     self,

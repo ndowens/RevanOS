@@ -28,7 +28,6 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = with pkgs; [
     alejandra
     brightnessctl # For Screen Brightness Control
@@ -36,6 +35,7 @@
     duf # Utility For Viewing Disk Usage In Terminal
     eza # Beautiful ls Replacement
     file-roller # Archive Manager
+    fzf
     gamemode
     gedit # Simple Graphical Text Editor
     greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
@@ -62,5 +62,6 @@
     wget # Tool For Fetching Files With Links
     wineWowPackages.staging
     wineWowPackages.waylandFull
+    inputs.nix-search-tv.packages.x86_64-linux.default
   ];
 }

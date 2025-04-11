@@ -6,5 +6,6 @@
     ".config/makepkg.conf".source = ./configs/makepkg.conf;
     ".config/artix-checkupdates/config".source = ./configs/artix-checkupdates/config;
     ".config/nix-search-tv/config.json".source = ./configs/nix-search-tv;
+    ".mozilla/firefox/kljk2z0k.default/prefs.js".source = ./configs/firefox/prefs.js;
   };
 }

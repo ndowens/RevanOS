@@ -30,7 +30,7 @@
     ./vscodium.nix
     ./wlogout
     ./xdg.nix
-    ./zen-browser.nix
+    #    ./zen-browser.nix
     ./zsh
   ];
 }

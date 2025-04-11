@@ -10,7 +10,7 @@
   clock24h = false;
 
   # Program Options
-  browser = "zen-beta"; # Set Default Browser (google-chrome-stable for google-chrome)
+  browser = "librewolf"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "ghostty"; # Set Default System Terminal
   keyboardLayout = "us";
   consoleKeyMap = "us";

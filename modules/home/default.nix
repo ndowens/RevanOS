@@ -14,29 +14,22 @@
     ./dotfiles.nix
     ./emoji.nix
     ./fastfetch
-    ./gh.nix
     ./git.nix
     ./grim.nix
     ./gtk.nix
     ./htop.nix
     ./hyprland
     ./ghostty.nix
-    ./kitty.nix
-    #    ./nixvim.nix
     ./nvf.nix
     ./packages.nix
     ./rofi
     ./qt.nix
     ./scripts
-    ./starship.nix
     ./stylix.nix
     ./swappy.nix
-    ./swaync.nix
     ./vscodium.nix
-    ./wezterm.nix
     ./wlogout
     ./xdg.nix
-    ./yazi
     ./zen-browser.nix
     ./zsh
   ];

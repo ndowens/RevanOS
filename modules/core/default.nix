@@ -11,7 +11,6 @@
     ./greetd.nix
     ./hardware.nix
     ./network.nix
-    ./nfs.nix
     ./nh.nix
     ./packages.nix
     ./power-profiles-daemon.nix
@@ -21,7 +20,6 @@
     ./starfish.nix
     ./steam.nix
     ./stylix.nix
-    ./syncthing.nix
     ./system.nix
     ./thunar.nix
     ./user.nix

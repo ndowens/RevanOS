@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./boot.nix
+    ./chaotic.nix
     ./flatpak.nix
     ./fonts.nix
     ./greetd.nix

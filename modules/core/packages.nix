@@ -4,7 +4,7 @@
   ...
 }: {
   programs = {
-    firefox.enable = false; # Firefox is not installed by default
+    firefox.enable = true; # Firefox is not installed by default
     nm-applet = {
       enable = false;
       indicator = false;

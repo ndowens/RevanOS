@@ -6,6 +6,7 @@
   imports = [
     ./boot.nix
     ./chaotic.nix
+    ./desktop-managers.nix
     ./flatpak.nix
     ./fonts.nix
     ./greetd.nix
@@ -25,7 +26,6 @@
     ./user.nix
     ./virtualisation.nix
     ./xserver.nix
-    inputs.stylix.nixosModules.stylix
   ];
   #  nix.package = pkgs.nixVersions.latest;
 }

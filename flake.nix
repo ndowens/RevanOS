@@ -29,6 +29,7 @@
       inputs.nixpkgs.follows = "det-nixpkgs";
     };
     nix-search-tv.url = "github:3timeslazy/nix-search-tv";
+    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
   };
   outputs = {
     self,
@@ -38,6 +39,8 @@
     home-manager,
     nvf,
     determinate,
+    nixos-cosmic,
+    stylix,
     ...
   } @ inputs: let
     system = "x86_64-v3-linux";
@@ -49,6 +52,14 @@
       nixpkgs.config.allowUnfree = true;
       nixpkgs.overlays = [
         hyprpanel.overlay
+      ];
+    };
+    nix.settings = {
+      substituters = [
+        "https://cosmic.cachix.org/"
+      ];
+      trusted-public-keys = [
+        "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
       ];
     };
   in {
@@ -67,6 +78,8 @@
           chaotic.nixosModules.default
           nixpkgsConfig
           determinate.nixosModules.default
+          nixos-cosmic.nixosModules.default
+          stylix.nixosModules.stylix
         ];
       };
     };

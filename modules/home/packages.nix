@@ -12,5 +12,6 @@
     unzip # Needed for ESO price updater
     keepassxc
     onedrive
+    nix-tree
   ];
 }

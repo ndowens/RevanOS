@@ -1,17 +1,13 @@
-{pkgs, ...}: {
-  xdg.portal = {
-    enable = true;
-    extraPortals = [pkgs.xdg-desktop-portal-hyprland];
-    configPackages = [pkgs.hyprland];
-  };
-  services = {
-    flatpak.enable = true; # Enable Flatpak
-  };
-  systemd.services.flatpak-repo = {
-    wantedBy = ["multi-user.target"];
-    path = [pkgs.flatpak];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
-  };
+{pkgs, ...}:
+{
+services.flatpak = 
+        {
+	enable = true;
+	remotes = [{
+  	name = "flathub-beta"; location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+}];
+	packages = [
+		{ appId = "eu.betterbird.Betterbird"; origin = "flathub"; }
+		"org.gnome.Boxes"];
+	};
 }

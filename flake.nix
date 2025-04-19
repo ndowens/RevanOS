@@ -29,7 +29,7 @@
       inputs.nixpkgs.follows = "det-nixpkgs";
     };
     nix-search-tv.url = "github:3timeslazy/nix-search-tv";
-    nixos-cosmic.url = "github:lilyinstarlight/nixos-cosmic";
+    nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena
   };
   outputs = {
     self,
@@ -39,7 +39,7 @@
     home-manager,
     nvf,
     determinate,
-    nixos-cosmic,
+    nix-flatpak,
     stylix,
     ...
   } @ inputs: let
@@ -78,7 +78,7 @@
           chaotic.nixosModules.default
           nixpkgsConfig
           determinate.nixosModules.default
-          nixos-cosmic.nixosModules.default
+          nix-flatpak.nixosModules.nix-flatpak
           stylix.nixosModules.stylix
         ];
       };

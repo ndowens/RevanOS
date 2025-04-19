@@ -1,0 +1,4 @@
+[gpg]
+	format = ssh
+[user]
+	signingkey = /home/ndowens/.ssh/id_rsa.pub

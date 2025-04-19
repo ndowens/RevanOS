@@ -7,5 +7,6 @@
     ".config/artix-checkupdates/config".source = ./configs/artix-checkupdates/config;
     ".config/nix-search-tv/config.json".source = ./configs/nix-search-tv;
     ".config/kglobalshortcutsrc".source = ./configs/kglobalshortcutsrc;
+    ".gitconfig".source = ./configs/gitconfig;
   };
 }

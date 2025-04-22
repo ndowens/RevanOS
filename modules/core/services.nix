@@ -30,5 +30,4 @@
       pulse.enable = true;
     };
   };
-  systemd.user.units.onedrive.wantedBy = ["multi-user.target"];
 }

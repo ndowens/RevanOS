@@ -62,6 +62,6 @@
     wget # Tool For Fetching Files With Links
     wineWowPackages.staging
     wineWowPackages.waylandFull
-    inputs.nix-search-tv.packages.x86_64-linux.default
+    #    inputs.nix-search-tv.packages.x86_64-linux.default
   ];
 }

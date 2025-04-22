@@ -11,7 +11,7 @@
     gst_all_1.gst-libav
     unzip # Needed for ESO price updater
     keepassxc
-    onedrive
+    seafile-client
     nix-tree
   ];
 }

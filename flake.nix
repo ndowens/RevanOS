@@ -15,10 +15,6 @@
       url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,6 +26,7 @@
     };
     nix-search-tv.url = "github:3timeslazy/nix-search-tv";
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena
+    nixvim.url = "github:dc-tec/nixvim";
   };
   outputs = {
     self,
@@ -41,6 +38,7 @@
     determinate,
     nix-flatpak,
     stylix,
+    nixvim,
     ...
   } @ inputs: let
     system = "x86_64-v3-linux";

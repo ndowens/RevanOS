@@ -5,7 +5,8 @@
   config,
   nixpkgs,
   ...
-}: {
+}:
+{
   nixpkgs.config.allowUnfree = true;
   imports = [
     ./bash.nix
@@ -20,7 +21,7 @@
     ./htop.nix
     ./hyprland
     ./ghostty.nix
-    ./nvf.nix
+    #    ./nvf.nix
     ./packages.nix
     ./rofi
     ./qt.nix

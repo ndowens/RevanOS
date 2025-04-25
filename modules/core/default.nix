@@ -2,14 +2,15 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./boot.nix
     ./chaotic.nix
     ./desktop-managers.nix
     ./flatpak.nix
     ./fonts.nix
-    ./greetd.nix
+    #    ./greetd.nix
     ./hardware.nix
     ./network.nix
     ./nh.nix

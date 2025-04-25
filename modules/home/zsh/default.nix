@@ -3,7 +3,8 @@
   pkgs,
   lib,
   ...
-}: {
+}:
+{
   imports = [
     ./zshrc-personal.nix
   ];
@@ -14,7 +15,10 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "ssh-agent"];
+      plugins = [
+        "git"
+        "ssh-agent"
+      ];
     };
 
     plugins = [
@@ -40,7 +44,7 @@
       }
     ];
 
-    initExtra = ''
+    initContent = ''
       bindkey "\eh" backward-word
       bindkey "\ej" down-line-or-history
       bindkey "\ek" up-line-or-history

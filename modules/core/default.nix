@@ -8,6 +8,7 @@
     ./boot.nix
     ./chaotic.nix
     ./desktop-managers.nix
+    ./env.nix
     ./flatpak.nix
     ./fonts.nix
     #    ./greetd.nix

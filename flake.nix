@@ -26,6 +26,7 @@
       url = "github:lilyinstarlight/nixos-cosmic";
       #      inputs.nixpkgs.follows = "nixos-cosmic/nixpkgs";
     };
+    nix-alien.url = "github:thiagokokada/nix-alien";
   };
   outputs =
     {

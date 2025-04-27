@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   username = "ndowens";
-in {
+in
+{
   programs.nh = {
     enable = true;
     clean = {

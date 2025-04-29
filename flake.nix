@@ -18,8 +18,8 @@
     nix-search-tv.url = "github:3timeslazy/nix-search-tv";
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena
     nixvim.url = "github:dc-tec/nixvim";
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
+    determinate = {
+      url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-cosmic = {
@@ -38,7 +38,7 @@
       nix-flatpak,
       stylix,
       nixvim,
-      lix-module,
+      determinate,
       nixos-cosmic,
       ...
     }@inputs:
@@ -79,7 +79,7 @@
             nixpkgsConfig
             nix-flatpak.nixosModules.nix-flatpak
             stylix.nixosModules.stylix
-            lix-module.nixosModules.default
+            determinate.nixosModules.default
             nixos-cosmic.nixosModules.default
           ];
         };

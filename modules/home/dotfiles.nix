@@ -1,4 +1,5 @@
-{username, ...}: {
+{ username, ... }:
+{
   home.file = {
     ".config/artools".source = ./configs/artools;
     ".config/pacman.d".source = ./configs/pacman.d;
@@ -8,5 +9,6 @@
     ".config/nix-search-tv/config.json".source = ./configs/nix-search-tv;
     ".config/kglobalshortcutsrc".source = ./configs/kglobalshortcutsrc;
     ".gitconfig".source = ./configs/gitconfig;
+    ".config/cosmic".source = ./configs/cosmic;
   };
 }

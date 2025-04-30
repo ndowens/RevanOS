@@ -1,7 +1,12 @@
 {
   description = "RevanOS";
+  nixConfig = {
+    extra-substituters = [ "https://cosmic.cachix.org" ];
+    extra-trusted-public-keys = [
+      "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
+    ];
+  };
   #ZaneyOS with my setup choice
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
@@ -18,15 +23,19 @@
     nix-search-tv.url = "github:3timeslazy/nix-search-tv";
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena
     nixvim.url = "github:dc-tec/nixvim";
-    determinate = {
-      url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # determinate = {
+    #  url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     nixos-cosmic = {
       url = "github:lilyinstarlight/nixos-cosmic";
       #      inputs.nixpkgs.follows = "nixos-cosmic/nixpkgs";
     };
     nix-alien.url = "github:thiagokokada/nix-alien";
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
@@ -38,7 +47,7 @@
       nix-flatpak,
       stylix,
       nixvim,
-      determinate,
+      lix-module,
       nixos-cosmic,
       ...
     }@inputs:
@@ -47,7 +56,6 @@
       host = "Revan";
       profile = "Revan";
       username = "ndowens";
-      pkgs = "import <nixpkgs> {}";
       nixpkgsConfig = {
         nixpkgs.config.allowUnfree = true;
         nixpkgs.overlays = [
@@ -66,12 +74,6 @@
             inherit profile;
           };
           modules = [
-            {
-              nix.settings = {
-                substituters = [ "https://cosmic.cachix.org/" ];
-                trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
-              };
-            }
             nixos-cosmic.nixosModules.default
             ./profiles/Revan
             home-manager.nixosModules.default
@@ -79,7 +81,7 @@
             nixpkgsConfig
             nix-flatpak.nixosModules.nix-flatpak
             stylix.nixosModules.stylix
-            determinate.nixosModules.default
+            lix-module.nixosModules.default
             nixos-cosmic.nixosModules.default
           ];
         };

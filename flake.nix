@@ -14,7 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-search-tv.url = "github:3timeslazy/nix-search-tv";
-    nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
     nixvim.url = "github:dc-tec/nixvim";
     # determinate = {
     #  url = "https://flakehub.com/f/DeterminateSystems/determinate/*";

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   services.flatpak = {
     enable = true;
     remotes = [
@@ -8,4 +8,7 @@
       }
     ];
   };
+  services.flatpak.packages = [
+    "eu.betterbird.Betterbird"
+  ];
 }

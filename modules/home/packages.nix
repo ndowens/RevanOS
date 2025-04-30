@@ -12,6 +12,7 @@
     keepassxc
     nix-tree
     lunar-client
+    maestral
     inputs.nixvim.packages.x86_64-linux.default
   ];
 }

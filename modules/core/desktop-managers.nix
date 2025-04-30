@@ -1,14 +1,14 @@
 {
   services.desktopManager = {
-    #   cosmic.enable = true;
+    cosmic.enable = true;
     plasma6.enable = false;
   };
   services.displayManager = {
     sddm.wayland.enable = false;
-    #    cosmic-greeter.enable = true;
+    cosmic-greeter.enable = true;
   };
   services.xserver.displayManager = {
-    gdm.wayland = true;
-    gdm.enable = true;
+    gdm.wayland = false;
+    gdm.enable = false;
   };
 }

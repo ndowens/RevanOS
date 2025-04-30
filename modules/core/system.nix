@@ -1,16 +1,24 @@
-{host, ...}: let
+{ host, ... }:
+let
   inherit (import ../../hosts/${host}/variables.nix) consoleKeyMap;
-in {
+in
+{
   nix = {
     settings = {
-#      download-buffer-size = 250000000;
+      #      download-buffer-size = 250000000;
       auto-optimise-store = true;
       experimental-features = [
         "nix-command"
         "flakes"
       ];
-      substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+      substituters = [
+        "https://hyprland.cachix.org"
+        "https://cosmic.cachix.org"
+      ];
+      trusted-public-keys = [
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
+      ];
     };
   };
   time.timeZone = "America/Chicago";
@@ -26,16 +34,16 @@ in {
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-  environment = { 
-  	variables = {
-    		ZANEYOS_VERSION = "2.3";
-    		ZANEYOS = "true";
-  	};
-        shellAliases = {
-		nix-build = "nom-build";
-		"nix build" = "nom build";
-		};
-	};
+  environment = {
+    variables = {
+      ZANEYOS_VERSION = "2.3";
+      ZANEYOS = "true";
+    };
+    shellAliases = {
+      nix-build = "nom-build";
+      "nix build" = "nom build";
+    };
+  };
   console.keyMap = "${consoleKeyMap}";
   system.stateVersion = "25.05"; # Do not change!
 }

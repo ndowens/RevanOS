@@ -14,6 +14,5 @@
     nix-tree
     lunar-client
     maestral
-    inputs.neve.packages.x86_64-linux.default
   ];
 }

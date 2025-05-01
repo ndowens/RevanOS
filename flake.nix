@@ -15,7 +15,7 @@
     };
     nix-search-tv.url = "github:3timeslazy/nix-search-tv";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
-    nixvim.url = "github:dc-tec/nixvim";
+    nvf.url = "github:NotAShelf/nvf";
     # determinate = {
     #  url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     #  inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +29,6 @@
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    neve.url = "github:redyf/Neve";
   };
   outputs =
     {
@@ -40,7 +39,6 @@
       home-manager,
       nix-flatpak,
       stylix,
-      neve,
       lix-module,
       nixos-cosmic,
       ...

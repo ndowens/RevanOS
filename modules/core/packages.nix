@@ -52,7 +52,6 @@
     lolcat # Add Colors To Your Terminal Command Output
     lshw # Detailed Hardware Information
     ncdu # Disk Usage Analyzer With Ncurses Interface
-    inputs.neve.packages.${pkgs.system}.default
     inputs.nix-alien.packages.x86_64-linux.nix-alien
     nixfmt-rfc-style # Nix Formatter
     nix-output-monitor

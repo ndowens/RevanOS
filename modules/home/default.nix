@@ -19,9 +19,8 @@
     ./grim.nix
     ./gtk.nix
     ./htop.nix
-    ./hyprland
+    #    ./hyprland
     ./ghostty.nix
-    #    ./nvf.nix
     ./packages.nix
     ./rofi
     ./qt.nix

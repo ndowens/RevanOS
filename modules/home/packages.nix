@@ -5,6 +5,7 @@
 }:
 {
   home.packages = with pkgs; [
+    emacs-nox
     heroic
     legcord
     gst_all_1.gst-libav
@@ -13,6 +14,6 @@
     nix-tree
     lunar-client
     maestral
-    inputs.nixvim.packages.x86_64-linux.default
+    inputs.neve.packages.x86_64-linux.default
   ];
 }

@@ -29,6 +29,7 @@
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-3.tar.gz";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    neve.url = "github:redyf/Neve";
   };
   outputs =
     {
@@ -39,7 +40,7 @@
       home-manager,
       nix-flatpak,
       stylix,
-      nixvim,
+      neve,
       lix-module,
       nixos-cosmic,
       ...

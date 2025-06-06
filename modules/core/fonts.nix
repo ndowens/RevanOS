@@ -1,15 +1,26 @@
 { pkgs, ... }:
 
-{
-  fonts = {
-    packages = with pkgs; [
-      noto-fonts-emoji
-      noto-fonts-cjk-sans
-      font-awesome
-      symbola
-      material-icons
-      fira-code
-      fira-code-symbols
-    ];
+fonts = {
+  fonts = with pkgs; [
+    noto-fonts
+    noto-fonts-emoji
+  ];
+
+  fontconfig = {
+    # Fixes pixelation
+    antialias = true;
+
+    # Fixes antialiasing blur
+    hinting = {
+      enable = true;
+      style = "hintfull"; # no difference
+      autohint = true; # no difference
+    };
+
+    subpixel = {
+      # Makes it bolder
+      rgba = "rgb";
+      lcdfilter = "default"; # no difference
+    };
   };
-}
+};

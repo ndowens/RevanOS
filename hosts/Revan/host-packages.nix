@@ -7,5 +7,6 @@
     mosh
     distrobox
     home-manager
+    steam
   ];
 }
